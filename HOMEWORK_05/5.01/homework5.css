@@ -1,0 +1,16 @@
+.form-group{
+	display: flex;
+}
+label{width: 175px;}
+span{
+	margin-top: 7px;
+	margin-left: 3px;
+	font-weight: bold;
+}
+.span2{
+	color: red;
+	margin-left: 3px;
+}
+select{
+
+}
