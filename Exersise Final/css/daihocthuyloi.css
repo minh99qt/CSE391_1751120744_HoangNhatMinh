@@ -1,47 +1,167 @@
-.header-meta{
-	display: inline-block;
-	border-bottom: 1px solid #bdccd2;
-	width: 100px;
-	padding-bottom: 3px;
-	margin-bottom: 14px;
-	margin-top: 25px;
- }
-.language{
-	display: inline-block;
-	width: 45px;
-}
-.header-meta ul{
-	display: inline-block;
-	width: 40px;
-	padding: 0px;
-}
-.main-menu ul {
-	display: inline-block;
-	display: flex;
+/* ================== 1,Reset Css ================== */
 
+html {
+    scroll-behavior: smooth;
 }
-.header-sline {
-	width: 100%;
-	background-color: red;
+
+a {
+    text-decoration: none;
 }
-.main-menu ul li a {
-	
-	display: block;
-	color: #fff;
-	font-size: 16px;
-	padding: 0 15px;
-	text-transform: uppercase;
-	font-family: 'Roboto Condensed', sans-serif;
-	line-height: 47px;
-	outline: none;
-	position: relative;
+
+img {
+    /* width: 100%; */
+    display: block;
 }
-.main-menu {
-	margin-top: 10px;
+
+ul,
+li {
+    list-style: none;
 }
-/*.dnn_searchPane i{
-	position: absolute;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-.dnn_searchPane input{
-	position: relative;
-}*/
+
+
+/* ================== 2,Header================== */
+
+.header {
+    padding: 20px 0 17px 0;
+    border-top: 10px solid #2b3f8d;
+    border-bottom: 1px solid #b2b2b2;
+}
+
+.header__page-right-meta ul li a {
+    color: #454545;
+    padding: 0 5px;
+    display: block;
+    text-decoration: none;
+}
+
+.header__page-right-languge {
+    vertical-align: top;
+    margin-left: 7px;
+    display: inline-block;
+    display: flex;
+}
+
+.header__page-right-meta {
+    border-bottom: 1px solid #bdccd2;
+    padding-bottom: 3px;
+    margin-bottom: 14px;
+    margin-top: 25px;
+    display: inline-block;
+}
+
+.header__page-right-meta {
+    display: inline-block;
+}
+
+.header__page-right-search .input-text {
+    background: transparent;
+    border: none;
+    color: #455a63;
+    font-family: 'Arial', sans-serif;
+    font-size: 12px;
+    width: 250px;
+    vertical-align: top;
+    padding-right: 55px;
+    height: 22px;
+}
+
+.header__page-right-search .input-submit {
+    border-radius: 2px;
+    border: 1px solid #adccd8;
+    color: #437b8f;
+    font-family: 'Roboto', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    padding: 3px 14px;
+    position: absolute;
+    right: -1px;
+    text-shadow: 2px 2px 1px rgba(255, 255, 255, 0.55);
+    top: -1px;
+    background: url(../img/bgr-submit.png) repeat-x 0 0;
+}
+
+.header__page-right-search {
+    position: relative;
+    background: #f2f7f9;
+    border: 1px solid #d1dee2;
+    padding: 1px 1px 1px 35px;
+    border-radius: 3px;
+    box-shadow: inset 0px 0px 4px 0px #eaf1f3;
+    width: 70%;
+    margin-left: auto;
+}
+
+.header__page-right-search i {
+    position: absolute;
+    top: 3px;
+    left: 7px;
+    width: 18px;
+    height: 18px;
+    display: inline-block;
+}
+
+
+/* ================== 2,Banner================= */
+
+.banner {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    background-image: url(../img/bgr-slider.jpg);
+    margin: 0px;
+}
+
+.banner__menu {
+    background-color: #0a1f77;
+}
+
+.banner__menu-nav-items-link {
+    display: block;
+    color: #fff;
+    font-size: 16px;
+    padding: 0 15px;
+    outline: none;
+    text-transform: uppercase;
+    font-family: 'Roboto Condensed', sans-serif;
+    line-height: 47px;
+}
+
+.banner__menu-nav-items {
+    display: block;
+    float: left;
+    padding-right: 1px;
+    background-color: #0a1f77;
+    position: relative;
+}
+
+.banner__menu-nav-items-link {
+    display: block;
+    color: #fff;
+    font-size: 16px;
+    padding: 0 15px;
+    outline: none;
+    text-transform: uppercase;
+    font-family: 'Roboto Condensed', sans-serif;
+    line-height: 47px;
+}
+
+ul li.banner__menu-nav-items::before {
+    background: #a7a8a8;
+    content: '';
+    display: inline-block;
+    height: 12px;
+    margin-top: -6px;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    width: 1px;
+    left: 0;
+}
+
+.banner__menu-img img {
+    max-width: 100%;
+}

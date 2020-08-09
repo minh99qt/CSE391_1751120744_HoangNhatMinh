@@ -5,15 +5,103 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Trường đại học Thủy Lợi</title>
-    <link rel="stylesheet" href="daihocthuyloi.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">\
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css">
-
-
+    <link rel="stylesheet" href="css/daihocthuyloi.css">
+    <link rel="stylesheet" href="css/_grid.css">
+    <!-- link bs4 cdn -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <!-- link gg font -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i,900,900i&amp;display=swap&amp;subset=vietnamese" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700,700i&amp;display=swap&amp;subset=vietnamese" rel="stylesheet">
+    <!-- font and some -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
 </head>
 
 <body>
+    <div class="wrapper">
+        <div class="header">
+            <div class="container">
+                <div class="header__page">
+                    <div class="row">
+                        <div class="col-md-7 col-9">
+                            <div class="header__page-logo">
+                                <a href=""><img src="./img/logo.png" alt=""></a>
+                            </div>
+                        </div>
+                        <div class="col-md-5 col-3">
+                            <div class="header__page-right text-right">
+                                <div class="header__page-right-meta">
+                                    <ul>
+                                        <li>
+                                            <a href="/login.html">Login</a>
+                                        </li>
+                                    </ul>
+                                    <div class="header__page-right-languge">
+                                        <a href="http://www.tlu.edu.vn/"><img src="./img/vi.jpg" alt=""></a>
+                                        <a href="http://www.tlu.edu.vn/"><img src="./img/en.jpg" alt=""></a>
+                                    </div>
+                                </div>
+                                <div class="header__page-right-search">
+                                    <div class="form">
+                                        <i class="fas fa-search"></i>
+                                        <input name="" type="text" id="tbxHomekeyword" class="input-text" placeholder="Tìm kiếm" autocomplete="off">
+                                        <input type="button" value="Tìm" class="input-submit" ng-click="formClick()">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End header  -->
+        <div class="banner">
+            <div class="container">
+                <div class="banner__menu">
+                    <ul class="banner__menu-nav">
+                        <li class="banner__menu-nav-items">
+                            <a href="" class="banner__menu-nav-items-link"><i class="fas fa-home"></i></a>
+                        </li>
+                        <li class="banner__menu-nav-items">
+                            <a href="" class="banner__menu-nav-items-link">Tin tức & thông báo</a>
+                            <!-- <ul class="banner__menu-nav-items-con">
+                                <li>
+                                    <a href="">Tin Video</a>
+                                </li>
+                            </ul> -->
+                        </li>
+                        <li class="banner__menu-nav-items">
+                            <a href="" class="banner__menu-nav-items-link">Tuyển sinh</a>
+                        </li>
+                        <li class="banner__menu-nav-items">
+                            <a href="" class="banner__menu-nav-items-link">Liên hệ</a>
+                        </li>
+                        <li class="banner__menu-nav-items">
+                            <a href="" class="banner__menu-nav-items-link">Giới thiệu</a>
+                        </li>
+                        <li class="banner__menu-nav-items">
+                            <a href="" class="banner__menu-nav-items-link">Đào tạo</a>
+                        </li>
+                        <li class="banner__menu-nav-items">
+                            <a href="" class="banner__menu-nav-items-link">Nghiên cứu</a>
+                        </li>
+                        <li class="banner__menu-nav-items">
+                            <a href="" class="banner__menu-nav-items-link">Sinh viên</a>
+                        </li>
+                        <li class="banner__menu-nav-items">
+                            <a href="" class="banner__menu-nav-items-link">Đối ngoại</a>
+                        </li>
+                        <li class="banner__menu-nav-items">
+                            <a href="" class="banner__menu-nav-items-link">Văn bản</a>
+                        </li>
 
+                    </ul>
+                    <div class="banner__menu-img">
+                        <img src="./img/baner-tuyen.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>
