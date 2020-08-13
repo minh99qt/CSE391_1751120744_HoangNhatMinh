@@ -5,18 +5,66 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Trường đại học Thủy Lợi</title>
+    <!-- Link css -->
     <link rel="stylesheet" href="css/daihocthuyloi.css">
     <link rel="stylesheet" href="css/_grid.css">
-    <!-- link bs4 cdn -->
+    <!--Link bs4 cdn -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    <!-- link gg font -->
+    <!-- Link gg font -->
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i,900,900i&amp;display=swap&amp;subset=vietnamese" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700,700i&amp;display=swap&amp;subset=vietnamese" rel="stylesheet">
-    <!-- font and some -->
+    <!-- Font and some -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+    <!-- Owlcarousel -->
+    <link rel="stylesheet" href="owlcarousel/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="owlcarousel/assets/owl.theme.default.min.css">
+    <!-- Link Jquery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="owlcarousel/owl.carousel.min.js"></script>
+
+
 </head>
 
 <body>
+    <script>
+        $(document).ready(function() {
+            $('.owl-carousel').owlCarousel({
+                loop: true,
+                margin: 10,
+                nav: true,
+                responsive: {
+                    0: {
+                        items: 1
+                    },
+                    600: {
+                        items: 3
+                    },
+                    1000: {
+                        items: 4
+                    }
+                }
+            })
+
+            function openPage(pageName, elmnt, color) {
+                var i, tabcontent, tablinks;
+                tabcontent = document.getElementsByClassName("tabcontent");
+                for (i = 0; i < tabcontent.length; i++) {
+                    tabcontent[i].style.display = "none";
+                }
+                tablinks = document.getElementsByClassName("tablink");
+                for (i = 0; i < tablinks.length; i++) {
+                    tablinks[i].style.backgroundColor = "";
+                    tablinks[i].classList.remove("active");
+                }
+                document.getElementById(pageName).style.display = "block";
+                elmnt.style.backgroundColor = color;
+                elmnt.classList.add("active");
+            }
+            // Get the element with id="defaultOpen" and click on it
+            document.getElementById("defaultOpen").click();
+
+        });
+    </script>
     <div class="wrapper">
         <div class="header">
             <div class="container">
@@ -30,20 +78,20 @@
                         <div class="col-md-5 col-3">
                             <div class="header__page-right text-right">
                                 <div class="header__page-right-meta">
-                                    <ul>
+                                    <ul class="header__page-right-meta-nav">
                                         <li>
-                                            <a href="/login.html">Login</a>
+                                            <a href="/login.html ">Login</a>
                                         </li>
                                     </ul>
-                                    <div class="header__page-right-languge">
-                                        <a href="http://www.tlu.edu.vn/"><img src="./img/vi.jpg" alt=""></a>
-                                        <a href="http://www.tlu.edu.vn/"><img src="./img/en.jpg" alt=""></a>
+                                    <div class="header__page-right-languge ">
+                                        <a href="http://www.tlu.edu.vn/ "><img src="./img/vi.jpg " alt=" "></a>
+                                        <a href="http://www.tlu.edu.vn/ "><img src="./img/en.jpg " alt=" "></a>
                                     </div>
                                 </div>
-                                <div class="header__page-right-search">
-                                    <div class="form">
-                                        <i class="fas fa-search"></i>
-                                        <input name="" type="text" id="tbxHomekeyword" class="input-text" placeholder="Tìm kiếm" autocomplete="off">
+                                <div class="header__page-right-search ">
+                                    <div class="form ">
+                                        <i class="fas fa-search "></i>
+                                        <input name=" " type="text " id="tbxHomekeyword " class="input-text " placeholder="Tìm kiếm " autocomplete="off ">
                                         <input type="button" value="Tìm" class="input-submit" ng-click="formClick()">
                                     </div>
                                 </div>
@@ -54,201 +102,248 @@
             </div>
         </div>
         <!-- End header  -->
-        <div class="banner">
-            <div class="container">
-                <div class="banner__menu">
-                    <ul class="banner__menu-nav">
-                        <li class="banner__menu-nav-items">
-                            <a href="" class="banner__menu-nav-items-link"><i class="fas fa-home"></i></a>
+        <div class="banner ">
+            <div class="container ">
+                <div class="banner__menu ">
+                    <ul class="banner__menu-nav ">
+                        <li class="banner__menu-nav-items ">
+                            <a href=" " class="banner__menu-nav-items-link "><i class="fas fa-home "></i></a>
                         </li>
-                        <li class="banner__menu-nav-items">
-                            <a href="" class="banner__menu-nav-items-link">Tin tức & thông báo</a>
-                            <!-- <ul class="banner__menu-nav-items-con">
-                                <li>
-                                    <a href="">Tin Video</a>
-                                </li>
-                            </ul> -->
+                        <li class="banner__menu-nav-items ">
+                            <a href=" " class="banner__menu-nav-items-link ">Tin tức & thông báo</a>
+                            <ul class="sub-menu ">
+                                <li><a href=" "><i class="fas fa-chevron-right "></i><i class="fas fa-chevron-right pd "></i>Tin Video</a></li>
+                                <li><a href=" "><i class="fas fa-chevron-right "></i><i class="fas fa-chevron-right "></i>Tin Tức</a></li>
+                                <li><a href=" "><i class="fas fa-chevron-right "></i><i class="fas fa-chevron-right "></i>Thông Báo</a></li>
+                            </ul>
                         </li>
-                        <li class="banner__menu-nav-items">
-                            <a href="../HOMEWORK_01/bai 1.02/bai1.02.html" class="banner__menu-nav-items-link">Tuyển sinh</a>
+                        <li class="banner__menu-nav-items ">
+                            <a href=" " class="banner__menu-nav-items-link ">Tuyển sinh</a>
                         </li>
-                        <li class="banner__menu-nav-items">
-                            <a href="" class="banner__menu-nav-items-link">Liên hệ</a>
+                        <li class="banner__menu-nav-items ">
+                            <a href=" " class="banner__menu-nav-items-link ">Liên hệ</a>
                         </li>
-                        <li class="banner__menu-nav-items">
-                            <a href="" class="banner__menu-nav-items-link">Giới thiệu</a>
+                        <li class="banner__menu-nav-items ">
+                            <a href=" " class="banner__menu-nav-items-link ">Giới thiệu</a>
+                            <ul class="sub-menu ">
+                                <li><a href=" "><i class="fas fa-chevron-right "></i><i class="fas fa-chevron-right "></i>Công tác đảng</a></li>
+                                <li><a href=" "><i class="fas fa-chevron-right "></i><i class="fas fa-chevron-right "></i>Công tác đoàn</a></li>
+                                <li><a href=" "><i class="fas fa-chevron-right "></i><i class="fas fa-chevron-right "></i>Cơ cấu tổ chức </a></li>
+                            </ul>
                         </li>
-                        <li class="banner__menu-nav-items">
-                            <a href="" class="banner__menu-nav-items-link">Đào tạo</a>
+                        <li class="banner__menu-nav-items ">
+                            <a href=" " class="banner__menu-nav-items-link ">Đào tạo</a>
+                            <ul class="sub-menu ">
+                                <li><a href=" "><i class="fas fa-chevron-right "></i><i class="fas fa-chevron-right "></i>Công tác đảng</a></li>
+                                <li><a href=" "><i class="fas fa-chevron-right "></i><i class="fas fa-chevron-right "></i>Công tác Công đoàn</a></li>
+
+
+                            </ul>
                         </li>
-                        <li class="banner__menu-nav-items">
-                            <a href="" class="banner__menu-nav-items-link">Nghiên cứu</a>
+                        <li class="banner__menu-nav-items ">
+                            <a href=" " class="banner__menu-nav-items-link ">Nghiên cứu</a>
+                            <ul class="sub-menu ">
+                                <li><a href=" "><i class="fas fa-chevron-right "></i><i class="fas fa-chevron-right "></i>Sở hữu trí tuệ</a></li>
+                                <li><a href=" "><i class="fas fa-chevron-right "></i><i class="fas fa-chevron-right "></i>Quỹ phát triển KH & CN</a></li>
+                                <li><a href=" "><i class="fas fa-chevron-right "></i><i class="fas fa-chevron-right "></i>Hôị nghị, Hội thảo</a></li>
+                                <li><a href=" "><i class="fas fa-chevron-right "></i><i class="fas fa-chevron-right "></i>Thông báo KHCN</a></li>
+                            </ul>
                         </li>
-                        <li class="banner__menu-nav-items">
-                            <a href="" class="banner__menu-nav-items-link">Sinh viên</a>
+                        <li class="banner__menu-nav-items ">
+                            <a href=" " class="banner__menu-nav-items-link ">Sinh viên</a>
+                            <ul class="sub-menu ">
+                                <li><a href=" "><i class="fas fa-chevron-right "></i><i class="fas fa-chevron-right "></i>Liên Hệ</a></li>
+                                <li><a href=" "><i class="fas fa-chevron-right "></i><i class="fas fa-chevron-right "></i>Sinh Viên tốt nghiệp</a></li>
+                                <li><a href=" "><i class="fas fa-chevron-right "></i><i class="fas fa-chevron-right "></i>Giáo viên chủ nhiệm</a></li>
+                                <li><a href=" "><i class="fas fa-chevron-right "></i><i class="fas fa-chevron-right "></i>Hỗ trợ sinh viên</a></li>
+                            </ul>
                         </li>
-                        <li class="banner__menu-nav-items">
-                            <a href="" class="banner__menu-nav-items-link">Đối ngoại</a>
+                        <li class="banner__menu-nav-items ">
+                            <a href=" " class="banner__menu-nav-items-link ">Đối ngoại</a>
+                            <ul class="sub-menu ">
+                                <li><a href=" "><i class="fas fa-chevron-right "></i><i class="fas fa-chevron-right "></i>Giới Thiệu Chung</a></li>
+                                <li><a href=" "><i class="fas fa-chevron-right "></i><i class="fas fa-chevron-right "></i>Tin tức đối ngoại</a></li>
+                                <li><a href=" "><i class="fas fa-chevron-right "></i><i class="fas fa-chevron-right "></i>Hợp tác đào tạo quốc tế</a></li>
+                            </ul>
                         </li>
-                        <li class="banner__menu-nav-items">
-                            <a href="" class="banner__menu-nav-items-link">Văn bản</a>
+                        <li class="banner__menu-nav-items ">
+                            <a href=" " class="banner__menu-nav-items-link ">Văn bản</a>
                         </li>
 
                     </ul>
-                    <div class="banner__menu-img">
-                        <img src="./img/baner-tuyen.jpg" alt="">
+                    <div class="banner__menu-img ">
+                        <img src="./img/baner-tuyen.jpg " alt=" ">
                     </div>
                 </div>
             </div>
         </div>
         <!-- End header -->
         <!-- start content -->
-        <div class="content">
-            <div class="container">
-                <div class="content__page">
-                    <div class="content__page-nav">
-                        <div class="content__page-nav-items">
-                            <a href=""><img src="./img/quality.jpg" alt=""></a>
-                            <h4><a href="/Kiem-dinh-va-dam-bao-chat-luong" target="_blank">Đảm bảo<br>
+        <div class="content ">
+            <div class="container ">
+                <div class="content__page ">
+                    <div class="content__page-nav ">
+                        <div class="content__page-nav-items ">
+                            <a href=" "><img src="./img/quality.jpg " alt=" "></a>
+                            <h4><a href="/Kiem-dinh-va-dam-bao-chat-luong " target="_blank " class="tx ">Đảm bảo<br>
                                 chất lượng</a></h4>
                         </div>
-                        <div class="content__page-nav-items">
-                            <a href=""><img src="./img/quality.jpg" alt=""></a>
-                            <h4><a href="/Kiem-dinh-va-dam-bao-chat-luong" target="_blank">Tạm Chí
+                        <div class="content__page-nav-items ">
+                            <a href=" "><img src="./img/www.jpg " alt=" "></a>
+                            <h4><a href="/Kiem-dinh-va-dam-bao-chat-luong " target="_blank " class="tx ">Tạm Chí
                                 </a></h4>
                         </div>
-                        <div class="content__page-nav-items">
-                            <a href=""><img src="./img/quality.jpg" alt=""></a>
-                            <h4><a href="/Kiem-dinh-va-dam-bao-chat-luong" target="_blank">Thư viện
+                        <div class="content__page-nav-items ">
+                            <a href=" "><img src="./img/library.jpg " alt=" "></a>
+                            <h4><a href="/Kiem-dinh-va-dam-bao-chat-luong " target="_blank " class="tx ">Thư viện
                                 </a></h4>
                         </div>
-                        <div class="content__page-nav-items">
-                            <a href=""><img src="./img/quality.jpg" alt=""></a>
-                            <h4><a href="/Kiem-dinh-va-dam-bao-chat-luong" target="_blank">TLU Mail
+                        <div class="content__page-nav-items ">
+                            <a href=" "><img src="./img/email.jpg " alt=" "></a>
+                            <h4><a href="/Kiem-dinh-va-dam-bao-chat-luong " target="_blank " class="tx ">TLU Mail
                                 </a></h4>
                         </div>
-                        <div class="content__page-nav-items">
-                            <a href=""><img src="./img/quality.jpg" alt=""></a>
-                            <h4><a href="/Kiem-dinh-va-dam-bao-chat-luong" target="_blank">Lịch công tác</a></h4>
+                        <div class="content__page-nav-items ">
+                            <a href=" "><img src="./img/lichcongtac.jpg " alt=" "></a>
+                            <h4><a href="/Kiem-dinh-va-dam-bao-chat-luong " target="_blank " class="tx ">Lịch công tác</a></h4>
                         </div>
-                        <div class="content__page-nav-items">
-                            <a href=""><img src="./img/quality.jpg" alt=""></a>
-                            <h4><a href="/Kiem-dinh-va-dam-bao-chat-luong" target="_blank">Đăng ký học</a></h4>
+                        <div class="content__page-nav-items ">
+                            <a href=" "><img src="./img/user.jpg " alt=" "></a>
+                            <h4><a href="/Kiem-dinh-va-dam-bao-chat-luong " target="_blank " class="blue " class="tx ">Đăng ký học</a></h4>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="content__box">
-                <div class="container">
-                    <div class="content__box-wrapper">
-                        <div class="row">
-                            <div class="col-lg-9">
-                                <div class="content__box-wrapper-posts">
-                                    <div class="container">
-                                        <div class="row">
-                                            <div class="col-md-7">
-                                                <div class="card-info">
-                                                    <div class="card-info__img">
-                                                        <a href="">
-                                                            <img src="./img/ung_vien.jpg" alt="">
+            <div class="content__box ">
+                <div class="container ">
+                    <div class="content__box-wrapper ">
+                        <div class="row ">
+                            <div class="col-lg-9 ">
+                                <div class="content__box-wrapper-posts ">
+                                    <div class="container ">
+                                        <div class="row ">
+                                            <div class="col-md-7 ">
+                                                <div class="card-info ">
+                                                    <div class="card-info__img ">
+                                                        <a href=" ">
+                                                            <img src="./img/ung_vien.jpg " alt=" ">
                                                         </a>
                                                     </div>
-                                                    <div class="card-info__body">
-                                                        <div class="card-info__body-title">
-                                                            <h3><a href="">Thông báo kết quả xét đạt tiêu chuẩn chức danh GS, PGS năm 2020</a></h3>
+                                                    <div class="card-info__body ">
+                                                        <div class="card-info__body-title ">
+                                                            <h3><a href=" " class="tx ">Thông báo kết quả xét đạt tiêu chuẩn chức danh GS, PGS năm 2020</a></h3>
                                                         </div>
-                                                        <div class="card-info__body-text">
+                                                        <div class="card-info__body-text ">
                                                             Căn cứ kết quả thẩm định và bỏ phiếu tín nhiệm cho từng ứng viên, Hội đồng giáo sư cơ sở Trường Đại học Thủy lợi thông báo kết quả...
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="col-md-5">
-                                                <div class="nav-tabs">
-                                                    <button class="tablink nav-link active" onclick="openPage('News', this, 'white')" id="defaultOpen" style="background-color: white;">Tin tức</button>
-                                                    <!-- <button class="tablink nav-link" onclick="openPage('Inform', this, 'white')" style="">Thông báo</button> -->
+                                            <div class="col-md-5 ">
+                                                <div class="nav-tabs ">
+                                                    <button class="tablink nav-link active " onclick="openPage( 'News', this, 'white') " id="defaultOpen " style="background-color: white; ">Tin tức</button>
+
                                                 </div>
-                                                <div class="tabcontent">
-                                                    <ul class="tabcontent__nav">
-                                                        <li class="tabcontent__nav-link">
-                                                            <a href="">Trường Đại học Thủy lợi tuyển sinh 2020 - Đón đầu xu thế</a>
+                                                <div class="tabcontent " id="News">
+                                                    <ul class=" tabcontent__nav ">
+                                                        <li class="tabcontent__nav-link ">
+                                                            <a href=" ">Trường Đại học Thủy lợi tuyển sinh 2020 - Đón đầu xu thế</a>
                                                         </li>
-                                                        <li class="tabcontent__nav-link">
-                                                            <a href="">Phương thức xét tuyển đại học chính quy năm 2020</a>
+                                                        <li class="tabcontent__nav-link ">
+                                                            <a href=" ">Phương thức xét tuyển đại học chính quy năm 2020</a>
                                                         </li>
-                                                        <li class="tabcontent__nav-link">
-                                                            <a href="">Các ngành tuyển sinh đại học chính quy năm 2020</a>
+                                                        <li class="tabcontent__nav-link ">
+                                                            <a href=" ">Các ngành tuyển sinh đại học chính quy năm 2020</a>
                                                         </li>
-                                                        <li class="tabcontent__nav-link">
-                                                            <a href="">Bộ Y tế và Bộ TT&TT đề nghị người dân cả nước cài Bluezone.</a>
+                                                        <li class="tabcontent__nav-link ">
+                                                            <a href=" ">Bộ Y tế và Bộ TT&TT đề nghị người dân cả nước cài Bluezone.</a>
                                                         </li>
-                                                        <li class="tabcontent__nav-link">
-                                                            <a href="">Khai giảng lớp bồi dưỡng nâng cao trình độ tiếng Anh</a>
+                                                        <li class="tabcontent__nav-link ">
+                                                            <a href=" ">Khai giảng lớp bồi dưỡng nâng cao trình độ tiếng Anh</a>
                                                         </li>
                                                     </ul>
-                                                    <div class="text-right">
-                                                        <a href=""><i class="fas fa-angle-double-right"></i>
+                                                    <div class="text-right ">
+                                                        <a href=" "><i class="fas fa-angle-double-right "></i>
                                                         Xem tất cả</a>
                                                     </div>
+                                                </div>
+                                                <div class="tabcontent " id="Inform" style="display: none;">
+                                                    <ul class=" tabcontent__nav ">
+                                                        <li class="tabcontent__nav-link ">
+                                                            <a href=" ">Trường Đại học Thủy lợi tuyển sinh 2020 - Đón đầu xu thế</a>
+                                                        </li>
+                                                        <li class="tabcontent__nav-link ">
+                                                            <a href=" ">Phương thức xét tuyển đại học chính quy năm 2020</a>
+                                                        </li>
+                                                        <li class="tabcontent__nav-link ">
+                                                            <a href=" ">Các ngành tuyển sinh đại học chính quy năm 2020</a>
+                                                        </li>
+                                                        <li class="tabcontent__nav-link ">
+                                                            <a href=" ">Bộ Y tế và Bộ TT&TT đề nghị người dân cả nước cài Bluezone.</a>
+                                                        </li>
+                                                        <li class="tabcontent__nav-link ">
+                                                            <a href=" ">Khai giảng lớp bồi dưỡng nâng cao trình độ tiếng Anh</a>
+                                                        </li>
+                                                    </ul>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-lg-3">
-                                <div class="content__post-wrapper-subject">
+                            <div class="col-lg-3 ">
+                                <div class="content__post-wrapper-subject ">
                                     <h3>PHÂN HIỆU - KHOA</h3>
-                                    <div class="content__post-wrapper-subject-list">
+                                    <div class="content__post-wrapper-subject-list ">
                                         <ul>
                                             <li>
-                                                <div class="text">
-                                                    <a href="">Khoa Công trình</a>
+                                                <div class="text ">
+                                                    <a href=" ">Khoa Công trình</a>
                                                 </div>
                                             </li>
                                             <li>
-                                                <div class="text">
-                                                    <a href="">Khoa Kỹ thuật tài nguyên nước</a>
+                                                <div class="text ">
+                                                    <a href=" ">Khoa Kỹ thuật tài nguyên nước</a>
                                                 </div>
                                             </li>
                                             <li>
-                                                <div class="text">
-                                                    <a href="">Khoa Công nghệ thông tin</a>
+                                                <div class="text ">
+                                                    <a href=" ">Khoa Công nghệ thông tin</a>
                                                 </div>
                                             </li>
                                             <li>
-                                                <div class="text">
-                                                    <a href="">Khoa Cơ khí</a>
+                                                <div class="text ">
+                                                    <a href=" ">Khoa Cơ khí</a>
                                                 </div>
                                             </li>
                                             <li>
-                                                <div class="text">
-                                                    <a href="">Khoa Điện - Điện tử</a>
+                                                <div class="text ">
+                                                    <a href=" ">Khoa Điện - Điện tử</a>
                                                 </div>
                                             </li>
                                             <li>
-                                                <div class="text">
-                                                    <a href="">Khoa Kinh tế và Quản lý</a>
+                                                <div class="text ">
+                                                    <a href=" ">Khoa Kinh tế và Quản lý</a>
                                                 </div>
                                             </li>
                                             <li>
-                                                <div class="text">
-                                                    <a href="">Khoa Hóa và Môi trường</a>
+                                                <div class="text ">
+                                                    <a href=" ">Khoa Hóa và Môi trường</a>
                                                 </div>
                                             </li>
                                             <li>
-                                                <div class="text">
-                                                    <a href="">Trung tâm Đào tạo quốc tế</a>
+                                                <div class="text ">
+                                                    <a href=" ">Trung tâm Đào tạo quốc tế</a>
                                                 </div>
                                             </li>
                                             <li>
-                                                <div class="text">
-                                                    <a href="">Phân hiệu Đại học Thủy lợi</a>
+                                                <div class="text ">
+                                                    <a href=" ">Phân hiệu Đại học Thủy lợi</a>
                                                 </div>
                                             </li>
                                             <li>
-                                                <div class="text">
-                                                    <a href="">Viện Đào tạo và Khoa học ứng dụng Miền Trung</a>
+                                                <div class="text ">
+                                                    <a href=" ">Viện Đào tạo và Khoa học ứng dụng Miền Trung</a>
                                                 </div>
                                             </li>
                                         </ul>
@@ -259,88 +354,91 @@
                     </div>
                 </div>
             </div>
+            <!-- Start box2 -->
             <div class="content__box2 ">
-                <div class="container">
-                    <div class="content__box2-page">
-                        <div class="row">
-                            <div class="col-md-4">
-                                <div class="content__box2-page-img">
-                                    <a href=""><img src="./img/TuyenSinhDH.jpg" alt=""></a>
+                <div class="container ">
+                    <div class="content__box2-page ">
+                        <div class="row ">
+                            <div class="col-md-4 ">
+                                <div class="content__box2-page-img ">
+                                    <a href=" "><img src="./img/TuyenSinhDH.jpg " alt=" "></a>
                                 </div>
                             </div>
-                            <div class="col-md-4">
-                                <div class="content__box2-page-img">
-                                    <a href=""><img src="./img/TuyenSinhThacSi.jpg" alt=""></a>
+                            <div class="col-md-4 ">
+                                <div class="content__box2-page-img ">
+                                    <a href=" "><img src="./img/TuyenSinhThacSi.jpg " alt=" "></a>
                                 </div>
                             </div>
-                            <div class="col-md-4">
-                                <div class="content__box2-page-img">
-                                    <a href=""><img src="./img/TuyenSinhTS.jpg" alt=""></a>
+                            <div class="col-md-4 ">
+                                <div class="content__box2-page-img ">
+                                    <a href=" "><img src="./img/TuyenSinhTS.jpg " alt=" "></a>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="content__box3">
-                <div class="container">
-                    <div class="content_box3-page">
-                        <div class="content__box3-page-heading">
-                            <h3><a href="">ĐÀO TẠO</a></h3>
+            <!-- End box2 -->
+            <!-- Start box3 -->
+            <div class="content__box3 ">
+                <div class="container ">
+                    <div class="content_box3-page ">
+                        <div class="content__box3-page-heading ">
+                            <h3><a href=" ">ĐÀO TẠO</a></h3>
                         </div>
-                        <div class="row">
-                            <div class="col-lg-9">
-                                <div class="row">
-                                    <div class="col-md-4">
-                                        <div class="content__box3-page-card">
-                                            <div class="content__box3-page-card-img1">
+                        <div class="row ">
+                            <div class="col-lg-9 ">
+                                <div class="row ">
+                                    <div class="col-md-4 ">
+                                        <div class="content__box3-page-card ">
+                                            <div class="content__box3-page-card-img1 ">
 
                                             </div>
-                                            <div class="content__box3-page-card-body">
-                                                <a href="">Thông tin thời gian bảo vệ luận án tiến sĩ cấp Trường của NCS Nguyễn Quang Lương</a>
+                                            <div class="content__box3-page-card-body ">
+                                                <a href=" " class="tx ">Thông tin thời gian bảo vệ luận án tiến sĩ cấp Trường của NCS Nguyễn Quang Lương</a>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-md-4">
-                                        <div class="content__box3-page-card">
-                                            <div class="content__box3-page-card-img2">
+                                    <div class="col-md-4 ">
+                                        <div class="content__box3-page-card ">
+                                            <div class="content__box3-page-card-img2 ">
 
                                             </div>
-                                            <div class="content__box3-page-card-body">
-                                                <a href="">Thông báo triển khai kế hoạch tính toán khối lượng vượt giờ năm học 2019-2020</a>
+                                            <div class="content__box3-page-card-body ">
+                                                <a href=" " class="tx ">Thông báo triển khai kế hoạch tính toán khối lượng vượt giờ năm học 2019-2020</a>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-md-4">
-                                        <div class="content__box3-page-card">
-                                            <div class="content__box3-page-card-img3">
+                                    <div class="col-md-4 ">
+                                        <div class="content__box3-page-card ">
+                                            <div class="content__box3-page-card-img3 ">
 
                                             </div>
-                                            <div class="content__box3-page-card-body">
-                                                <a href="">Thông tin luận án tiến sĩ cấp Trường của NCS Nguyễn Quang Lương</a>
+                                            <div class="content__box3-page-card-body ">
+                                                <a href=" " class="tx ">Thông tin luận án tiến sĩ cấp Trường của NCS Nguyễn Quang Lương</a>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-lg-3">
-                                <ul class="content__box3-page-nav">
-                                    <li class="content__box3-page-nav-list">
-                                        <a href="">Thông báo triển khai kế hoạch tính toán khối lượng vượt giờ năm học...</a>
+                            <div class="col-lg-3 ">
+                                <ul class="content__box3-page-nav ">
+                                    <li class="content__box3-page-nav-list ">
+                                        <a href=" ">Thông báo triển khai kế hoạch tính toán khối lượng vượt giờ năm học...</a>
                                     </li>
-                                    <li class="content__box3-page-nav-list">
-                                        <a href="">Thông tin luận án tiến sĩ cấp Trường của NCS Nguyễn Quang Lương</a>
+                                    <li class="content__box3-page-nav-list ">
+                                        <a href=" ">Thông tin luận án tiến sĩ cấp Trường của NCS Nguyễn Quang Lương</a>
                                     </li>
-                                    <li class="content__box3-page-nav-list">
-                                        <a href="">Thông tin thời gian bảo vệ luận án tiến sĩ cấp Trường của NCS...</a>
+                                    <li class="content__box3-page-nav-list ">
+                                        <a href=" ">Thông tin thời gian bảo vệ luận án tiến sĩ cấp Trường của NCS...</a>
                                     </li>
-                                    <li class="content__box3-page-nav-list">
-                                        <a href="">Thông báo về tổ chức thi chuẩn Tiếng Anh đầu ra A2 đợt 1...</a>
+                                    <li class="content__box3-page-nav-list ">
+                                        <a href=" ">Thông báo về tổ chức thi chuẩn Tiếng Anh đầu ra A2 đợt 1...</a>
                                     </li>
                                 </ul>
                             </div>
-                            <div class="content__box-page-text-right">
-                                <a href=""><i class="fas fa-angle-double-right"></i>
+                            <div class="content__box3-page-text-right ">
+                                <a href=" "><i class="fas fa-angle-double-right "></i>
                                     Xem tất cả</a>
                             </div>
                         </div>
@@ -349,65 +447,65 @@
             </div>
             <!-- End content__box3 -->
             <!-- Start content__box4 -->
-            <div class="content__box4">
-                <div class="container">
-                    <div class="content_box4-page">
-                        <div class="content__box4-page-heading">
-                            <h3><a href="">ĐỐI NGOẠI</a></h3>
+            <div class="content__box4 ">
+                <div class="container ">
+                    <div class="content_box4-page ">
+                        <div class="content__box4-page-heading ">
+                            <h3><a href=" ">ĐỐI NGOẠI</a></h3>
                         </div>
-                        <div class="row">
-                            <div class="col-lg-9">
-                                <div class="row">
-                                    <div class="col-md-4">
-                                        <div class="content__box4-page-card">
-                                            <div class="content__box4-page-card-img1">
+                        <div class="row ">
+                            <div class="col-lg-9 ">
+                                <div class="row ">
+                                    <div class="col-md-4 ">
+                                        <div class="content__box4-page-card ">
+                                            <div class="content__box4-page-card-img1 ">
 
                                             </div>
-                                            <div class="content__box4-page-card-body">
-                                                <a href="">Trường ĐHTL khai thác tiềm năng hợp tác với ĐH Hosei, Nhật Bản trong lĩnh vực Kỹ thuật Robot, Trí tuệ nhân tạo và Điện-điện tử</a>
+                                            <div class="content__box4-page-card-body ">
+                                                <a href=" " class="tx ">Trường ĐHTL khai thác tiềm năng hợp tác với ĐH Hosei, Nhật Bản trong lĩnh vực Kỹ thuật Robot, Trí tuệ nhân tạo và Điện-điện tử</a>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-md-4">
-                                        <div class="content__box4-page-card">
-                                            <div class="content__box4-page-card-img2">
+                                    <div class="col-md-4 ">
+                                        <div class="content__box4-page-card ">
+                                            <div class="content__box4-page-card-img2 ">
 
                                             </div>
-                                            <div class="content__box4-page-card-body">
-                                                <a href="">Chương trình, Dự án quốc tế, Đề tài hợp tác nghiên cứu với đối tác nước ngoài</a>
+                                            <div class="content__box4-page-card-body ">
+                                                <a href=" " class="tx ">Chương trình, Dự án quốc tế, Đề tài hợp tác nghiên cứu với đối tác nước ngoài</a>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-md-4">
-                                        <div class="content__box4-page-card">
-                                            <div class="content__box4-page-card-img3">
+                                    <div class="col-md-4 ">
+                                        <div class="content__box4-page-card ">
+                                            <div class="content__box4-page-card-img3 ">
 
                                             </div>
-                                            <div class="content__box4-page-card-body">
-                                                <a href="">Bí thư thứ hai Đại sứ quán Indonesia đến làm việc với Nhà trường
+                                            <div class="content__box4-page-card-body ">
+                                                <a href=" " class="tx ">Bí thư thứ hai Đại sứ quán Indonesia đến làm việc với Nhà trường
                                                 </a>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-lg-3">
-                                <ul class="content__box4-page-nav">
-                                    <li class="content__box4-page-nav-list">
-                                        <a href="">Lễ ký kết Biên bản ghi nhớ với Công ty TNHH Mirae E&I, Hàn...</a>
+                            <div class="col-lg-3 ">
+                                <ul class="content__box4-page-nav ">
+                                    <li class="content__box4-page-nav-list ">
+                                        <a href=" ">Lễ ký kết Biên bản ghi nhớ với Công ty TNHH Mirae E&I, Hàn...</a>
                                     </li>
-                                    <li class="content__box4-page-nav-list">
-                                        <a href="">Hợp tác trong nghiên cứu khoa học và đào tạo</a>
+                                    <li class="content__box4-page-nav-list ">
+                                        <a href=" ">Hợp tác trong nghiên cứu khoa học và đào tạo</a>
                                     </li>
-                                    <li class="content__box4-page-nav-list">
-                                        <a href="">Thông báo tuyển sinh Chương trình Meister School "Kỹ sư làm việc tại Nhật...</a>
+                                    <li class="content__box4-page-nav-list ">
+                                        <a href=" ">Thông báo tuyển sinh Chương trình Meister School "Kỹ sư làm việc tại Nhật...</a>
                                     </li>
                                     <li class="content__box4-page-nav-list">
                                         <a href="">Tọa đàm, gặp mặt và đề xuất hợp tác với các đối tác quốc...</a>
                                     </li>
                                 </ul>
                             </div>
-                            <div class="content__box-page-text-right">
+                            <div class="content__box4-page-text-right">
                                 <a href=""><i class="fas fa-angle-double-right"></i>
                                     Xem tất cả</a>
                             </div>
@@ -421,7 +519,7 @@
                 <div class="container">
                     <div class="content_box5-page">
                         <div class="row row-space">
-                            <div class="col-lg-9">
+                            <div class="col-md-9">
                                 <div class="content__box5-page-heading">
                                     <h3><a href="">NGHIÊN CỨU</a></h3>
                                 </div>
@@ -432,7 +530,7 @@
 
                                             </div>
                                             <div class="content__box5-page-card-body">
-                                                <a href="">Đề xuất đề tài/dự án thuộc chương trình KH&CN trọng điểm cấp quốc gia giai đoạn đến năm 2025.</a>
+                                                <a href="" class="tx">Đề xuất đề tài/dự án thuộc chương trình KH&CN trọng điểm cấp quốc gia giai đoạn đến năm 2025.</a>
                                             </div>
                                         </div>
                                     </div>
@@ -442,7 +540,7 @@
 
                                             </div>
                                             <div class="content__box5-page-card-body">
-                                                <a href="">Nghiệm thu Đề tài khoa học công nghệ do nhóm nghiên cứu trường Đại học Thủy lợi thực hiện</a>
+                                                <a href="" class="tx">Nghiệm thu Đề tài khoa học công nghệ do nhóm nghiên cứu trường Đại học Thủy lợi thực hiện</a>
                                             </div>
                                         </div>
                                     </div>
@@ -452,14 +550,14 @@
 
                                             </div>
                                             <div class="content__box5-page-card-body">
-                                                <a href="">Hội thảo quốc tế về công nghệ tiên tiến trong xử lý tín hiệu, viễn thông và điện toán (Sigtelcom 2020)
+                                                <a href="" class="tx">Hội thảo quốc tế về công nghệ tiên tiến trong xử lý tín hiệu, viễn thông và điện toán (Sigtelcom 2020)
                                                 </a>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-lg-3">
+                            <div class="col-md-3">
                                 <div class="content__box5-page-heading">
                                     <h3><a href="">SỰ KIỆN</a></h3>
                                     <img src="./img/sigtelcom.jpg" alt="">
@@ -537,8 +635,103 @@
                     </div>
                 </div>
             </div>
-
+            <!-- End box6 -->
+            <!-- Start  cooperate -->
+            <div class="cooperate">
+                <div class="container">
+                    <div class="cooperate__content">
+                        <div class="cooperate__content-title">
+                            <h3>Đối tác tiêu biểu của trường</h3>
+                        </div>
+                        <div class="cooperate__content-carousel">
+                            <div class="owl-carousel owl-theme">
+                                <div class="item">
+                                    <a href=""><img src="./img/01tudelft.jpg" alt=""></a>
+                                </div>
+                                <div class="item">
+                                    <a href=""><img src="./img/02brescia.jpg " alt=""></a>
+                                </div>
+                                <div class="item">
+                                    <a href=""><img src="./img/03kyushu.jpg " alt=""></a>
+                                </div>
+                                <div class="item">
+                                    <a href=""><img src="./img/04tohoku.jpg" alt=""></a>
+                                </div>
+                                <div class="item">
+                                    <a href=""><img src="./img/05jj.jpg" alt=""></a>
+                                </div>
+                                <div class="item">
+                                    <a href=""><img src="./img/06colorado.jpg" alt=""></a>
+                                </div>
+                                <div class="item">
+                                    <a href=""><img src="./img/08en.jpg" alt=""></a>
+                                </div>
+                                <div class="item">
+                                    <a href=""><img src="./img/09damwatch.jpg" alt=""></a>
+                                </div>
+                                <div class="item">
+                                    <a href=""><img src="./img/10gns.jpg" alt=""></a>
+                                </div>
+                                <div class="item">
+                                    <a href=""><img src="./img/05jj.jpg" alt=""></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End coooperate  -->
+            <!-- Start Footer -->
+            <div class="footer">
+                <div class="footer__page-top">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-8 footer__page-top-right">
+                                <h3>© 2020 TRƯỜNG ĐẠI HỌC THỦY LỢI</h3>
+                            </div>
+                            <div class="col-md-4  footer__page-top-left">
+                                <a href="https://www.facebook.com/daihocthuyloi1959/?fref=ts"><img src="./img/fb-icon.png" alt=""></a>
+                                <a href="https://www.youtube.com/user/daihocthuyloi"><img src="./img/ytb-icon.png" alt=""></a>
+                                <a href="https://twitter.com/Daihocthuyloihn"><img src="./img/twitter-icon.png" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer__page-middle">
+                    <div class="container">
+                        <div class="footer__page-middle-content">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="footer__page-middle-content-map">
+                                        <a href=""><img src="./img/TLU-map.png" alt=""></a>
+                                    </div>
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="footer__page-middle-content-address">
+                                                TRƯỜNG ĐẠI HỌC THỦY LỢI<br> Địa chỉ: 175 Tây Sơn, Đống Đa, Hà Nội<br> Điện thoại: (024) 38522201 - Fax: (024) 35633351<br> Email: <a href="#">phonghcth@tlu.edu.vn</a>
+                                            </div>
+                                            <hr>
+                                            <div class="footer__page-middle-content-address">PHÂN HIỆU ĐẠI HỌC THỦY LỢI<br> Địa chỉ 1: Số 2 Trường Sa, P.17, Q.Bình Thạnh, Tp.Hồ Chí Minh</div>
+                                            <div class="footer__page-middle-content-address">Điện thoại: (028) 38400532 - Fax: (028) 38400542</div>
+                                            <div class="footer__page-middle-content-address">Địa chỉ 2: Phường An Thạnh, TP&nbsp;Thuận An, Tỉnh Bình Dương<br> Điện thoại: (065) 3748620 -&nbsp;Fax: (065) 3833489<br> Email: <a href="#">cs2@tlu.edu.vn</a></div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="footer__page-middle-content-address">CƠ SỞ PHỐ HIẾN<br> Địa chỉ: Quốc lộ 38B Nhật Tân, Tiên Lữ, Hưng Yên<br> Điện thoại: (0221) 3883885</div>
+                                            <div class="footer__page-middle-content-address">Email: Bandtctsvphohien@tlu.edu.vn</div>
+                                            <hr>
+                                            <div class="footer__page-middle-content-address">VIỆN ĐÀO TẠO VÀ KHOA HỌC ỨNG DỤNG MIỀN TRUNG<br> Địa chỉ: Số 115 Trần Phú, Thành phố&nbsp;Phan Rang, Tỉnh Ninh Thuận<br> Điện thoại: (0259) 3823027, (0259) 3823028<br> Email: <a href="#"> trungtamdh2@tlu.edu.vn</a></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
+    </div>
 </body>
 
 </html>
